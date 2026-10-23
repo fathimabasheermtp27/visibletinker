@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TinkerHub Foundation — Learning travels further together</title>
+<meta name="description" content="TinkerHub Foundation is a Kerala non-profit connecting students, mentors, colleges and partners so young people learn technology by building it — 72 campus communities, two open TinkerSpaces, and statewide hackathons.">
+<meta property="og:title" content="TinkerHub Foundation">
+<meta property="og:description" content="Learning travels further together. Campus communities, open makerspaces and hackathons across Kerala.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1F3D2B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23FF7A3D' stroke='%231F3D2B' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF4E6}
+html{scroll-behavior:smooth}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
+.s3{grid-column:span 3}.s4{grid-column:span 4}.s5{grid-column:span 5}.s6{grid-column:span 6}.s7{grid-column:span 7}.s8{grid-column:span 8}.s12{grid-column:span 12}
+@media (max-width: 980px){.s3{grid-column:span 6}.s4,.s5,.s6,.s7,.s8{grid-column:span 12}}
+@media (max-width: 600px){.s3{grid-column:span 12}.hideS{display:none!important}}
+.serif{font-family:Fraunces,Georgia,serif}
+.h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(34px,4.4vw,58px);line-height:1.02;letter-spacing:-.02em;margin:0}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 14px}
+a{color:#1F3D2B}
+a:focus-visible,button:focus-visible{outline:3px solid #FF7A3D;outline-offset:3px;border-radius:6px}
+.lift{transition:transform .2s ease}
+.lift:hover{transform:translateY(-4px) rotate(-.4deg)}
+.flow{animation:flow 22s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-480}}
+.bob{animation:bob 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes bob{50%{transform:translateY(-7px)}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.flow,.bob{animation:none}.lift:hover{transform:none}}
+.btn1{background:#1F3D2B;color:#FBF4E6;text-decoration:none;font-weight:600;padding:0 24px;height:50px;border-radius:999px;display:inline-flex;align-items:center;gap:8px}
+.btn2{background:transparent;color:#1F3D2B;text-decoration:none;font-weight:600;padding:0 24px;height:50px;border-radius:999px;display:inline-flex;align-items:center;border:2px solid #1F3D2B}
+.squig{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12'%3E%3Cpath d='M2 8 C 20 2, 30 12, 50 6 S 80 2, 118 7' fill='none' stroke='%23FF7A3D' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:100% 14px;background-position:0 100%;padding-bottom:8px}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="font-family: 'Instrument Sans', Inter, system-ui, sans-serif; color: #1F3D2B; background: #FBF4E6; font-size: 17px; line-height: 1.6">
+
+<header style="position: sticky; top: 0; z-index: 30; background: #FBF4E6; border-bottom: 2px solid #1F3D2B">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none">
+<span aria-hidden="true" style="width: 36px; height: 36px; border-radius: 50%; background: #FF7A3D; border: 2px solid #1F3D2B; display: flex; align-items: center; justify-content: center; font-family: Fraunces, Georgia, serif; font-weight: 700">t</span>
+<span class="serif" style="font-weight: 700; font-size: 20px">TinkerHub Foundation</span>
+</a>
+<nav aria-label="Primary" class="hideS" style="display: flex; gap: 26px; font-weight: 600; font-size: 15px">
+<a href="#work" style="text-decoration: none">Our work</a>
+<a href="#impact" style="text-decoration: none">Impact</a>
+<a href="#places" style="text-decoration: none">Where</a>
+<a href="#partner" style="text-decoration: none">Partner</a>
+<a href="#library" style="text-decoration: none">Reports</a>
+</nav>
+<a href="#partner" class="btn1" style="height: 42px; padding: 0 18px; font-size: 15px">Partner with us</a>
+</div>
+</header>
+
+<main>
+
+<!-- A HERO -->
+<section id="top">
+<div class="wrap g" style="padding-top: 64px; padding-bottom: 72px; align-items: center">
+<div class="s6">
+<p class="kicker" style="color: #FF7A3D">A non-profit in Kerala · since 2015</p>
+<h1 class="serif" style="margin: 0 0 24px; font-weight: 600; font-size: clamp(46px, 6.4vw, 86px); line-height: 0.98; letter-spacing: -0.03em">Learning travels further <span class="squig">together.</span></h1>
+<p style="margin: 0 0 32px; font-size: 20px; line-height: 1.5; max-width: 540px">We connect students, mentors, colleges and partners so young people in Kerala can learn technology by building it — in campus communities, in free open makerspaces, and at hackathons across the state. Learners never pay.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#work" class="btn1">Explore our work <span aria-hidden="true">→</span></a>
+<a href="#partner" class="btn2">Partner with us</a>
+</div>
+<ul aria-label="Credentials" style="margin: 28px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; font-weight: 600">
+<li style="border: 1.5px solid #1F3D2B; border-radius: 999px; padding: 4px 12px; background: #FFFFFF">Registered society</li>
+<li style="border: 1.5px solid #1F3D2B; border-radius: 999px; padding: 4px 12px; background: #FFFFFF">12AA &amp; 80G</li>
+<li style="border: 1.5px solid #1F3D2B; border-radius: 999px; padding: 4px 12px; background: #FFD15C">CSR-1 eligible</li>
+<li style="border: 1.5px solid #1F3D2B; border-radius: 999px; padding: 4px 12px; background: #FFFFFF">Financials public since 2018</li>
+</ul>
+</div>
+<div class="s6"><svg viewBox="0 0 560 500" role="img" aria-label="Illustration: a learner, a mentor, a college, a makerspace workbench and a group of friends, joined by a looping line along which ideas travel" style="display:block;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg"><path d="M70,90 C160,10 420,0 500,110 C570,210 540,400 430,460 C320,515 120,490 60,390 C0,290 -10,160 70,90 Z" fill="#F6C9D0"></path><path class="flow" d="M130,150 C220,60 360,70 425,140 C500,220 470,330 440,360 C380,420 200,430 120,360 C60,300 60,210 130,150 Z" fill="none" stroke="#1F3D2B" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 10"></path><path d="M97.0,182.0 C95.0,142.0 109.0,132.0 125,132.0 C142.0,132.0 156.0,144.0 152.0,182.0 Z" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="125" cy="112.0" r="17.0" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M108.0,108.0 C111.0,90.0 139.0,90.0 142.0,108.0 C133.0,100.0 119.0,98.0 108.0,108.0 Z" fill="#1F3D2B"></path><circle cx="119.0" cy="113.0" r="1.8" fill="#1F3D2B"></circle><circle cx="131.0" cy="113.0" r="1.8" fill="#1F3D2B"></circle><path d="M120.0,121.0 Q125,125.0 130.0,121.0" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><rect x="96" y="168" width="58" height="10" rx="3" fill="#B9DDEB" stroke="#1F3D2B" stroke-width="2.5"></rect><path d="M402.0,174.0 C400.0,134.0 414.0,124.0 430,124.0 C447.0,124.0 461.0,136.0 457.0,174.0 Z" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="430" cy="104.0" r="17.0" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M413.0,100.0 C416.0,82.0 444.0,82.0 447.0,100.0 C438.0,92.0 424.0,90.0 413.0,100.0 Z" fill="#1F3D2B"></path><circle cx="424.0" cy="105.0" r="1.8" fill="#1F3D2B"></circle><circle cx="436.0" cy="105.0" r="1.8" fill="#1F3D2B"></circle><path d="M425.0,113.0 Q430,117.0 435.0,113.0" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><path d="M444,34 H496 Q504,34 504,42 V58 Q504,66 496,66 H462 L452,76 L454,66 H444 Q436,66 436,58 V42 Q436,34 444,34 Z" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><text x="470" y="55" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="15" fill="#1F3D2B">&lt;/&gt;</text><path d="M63,330 L115,296 L167,330 Z" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><rect x="69" y="330" width="92" height="56" fill="#BFE3C8" stroke="#1F3D2B" stroke-width="2.5"></rect><rect x="79" y="340" width="8" height="46" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><rect x="101" y="340" width="8" height="46" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><rect x="123" y="340" width="8" height="46" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><rect x="145" y="340" width="8" height="46" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><path d="M59,388 H171" stroke="#1F3D2B" stroke-width="3" stroke-linecap="round"></path><rect x="382" y="345" width="116" height="12" rx="3" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="2.5"></rect><path d="M392,357 V395 M488,357 V395" stroke="#1F3D2B" stroke-width="3" stroke-linecap="round"></path><rect x="402" y="323" width="34" height="22" rx="3" fill="#B9DDEB" stroke="#1F3D2B" stroke-width="2.5"></rect><path d="M396,345 H442" stroke="#1F3D2B" stroke-width="2.5"></path><circle cx="468" cy="329" r="11" fill="none" stroke="#1F3D2B" stroke-width="7" stroke-dasharray="4 4"></circle><circle cx="468" cy="329" r="10" fill="#F6C9D0" stroke="#1F3D2B" stroke-width="2.5"></circle><circle cx="468" cy="329" r="4" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></circle><path d="M226.2,302.7 C224.5,268.7 236.4,260.2 250,260.2 C264.45,260.2 276.35,270.4 272.95,302.7 Z" fill="#BFE3C8" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="250" cy="243.2" r="14.45" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M235.55,239.8 C238.1,224.5 261.9,224.5 264.45,239.8 C256.8,233.0 244.9,231.3 235.55,239.8 Z" fill="#1F3D2B"></path><circle cx="244.9" cy="244.05" r="1.8" fill="#1F3D2B"></circle><circle cx="255.1" cy="244.05" r="1.8" fill="#1F3D2B"></circle><path d="M245.75,250.85 Q250,254.25 254.25,250.85" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><path d="M274.8,317.8 C273.0,281.8 285.6,272.8 300,272.8 C315.3,272.8 327.9,283.6 324.3,317.8 Z" fill="#D9CCF2" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="300" cy="254.8" r="15.3" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M284.7,251.2 C287.4,235.0 312.6,235.0 315.3,251.2 C307.2,244.0 294.6,242.2 284.7,251.2 Z" fill="#1F3D2B"></path><circle cx="294.6" cy="255.7" r="1.8" fill="#1F3D2B"></circle><circle cx="305.4" cy="255.7" r="1.8" fill="#1F3D2B"></circle><path d="M295.5,262.9 Q300,266.5 304.5,262.9" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><path d="M321.2,302.7 C319.5,268.7 331.4,260.2 345,260.2 C359.45,260.2 371.35,270.4 367.95,302.7 Z" fill="#B9DDEB" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="345" cy="243.2" r="14.45" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M330.55,239.8 C333.1,224.5 356.9,224.5 359.45,239.8 C351.8,233.0 339.9,231.3 330.55,239.8 Z" fill="#1F3D2B"></path><circle cx="339.9" cy="244.05" r="1.8" fill="#1F3D2B"></circle><circle cx="350.1" cy="244.05" r="1.8" fill="#1F3D2B"></circle><path d="M340.75,250.85 Q345,254.25 349.25,250.85" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><g class="bob"><circle cx="280" cy="175" r="11" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5"></circle><rect x="275" y="185" width="10" height="6" rx="2" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><path d="M280,157 V151 M266,163 L261,158 M294,163 L299,158" stroke="#1F3D2B" stroke-width="2.5" stroke-linecap="round"></path></g><path d="M205,81 L207.5,87.5 L214,90 L207.5,92.5 L205,99 L202.5,92.5 L196,90 L202.5,87.5 Z" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="1.5" stroke-linejoin="round"></path><path d="M360,206 L362.5,212.5 L369,215 L362.5,217.5 L360,224 L357.5,217.5 L351,215 L357.5,212.5 Z" fill="#FFD15C" stroke="#1F3D2B" stroke-width="1.5" stroke-linejoin="round"></path><path d="M505,241 L507.5,247.5 L514,250 L507.5,252.5 L505,259 L502.5,252.5 L496,250 L502.5,247.5 Z" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="1.5" stroke-linejoin="round"></path><path d="M60,241 L62.5,247.5 L69,250 L62.5,252.5 L60,259 L57.5,252.5 L51,250 L57.5,247.5 Z" fill="#FFD15C" stroke="#1F3D2B" stroke-width="1.5" stroke-linejoin="round"></path></svg></div>
+</div>
+</section>
+
+<!-- B IMPACT, WITH EVIDENCE -->
+<section id="impact" style="background: #1F3D2B; color: #FBF4E6">
+<div class="wrap" style="padding-top: 96px; padding-bottom: 96px">
+<p class="kicker" style="color: #FFD15C">Impact, with evidence</p>
+<p class="serif" style="margin: 0; font-size: clamp(30px, 3.8vw, 52px); line-height: 1.22; letter-spacing: -0.015em; max-width: 1100px">
+<strong style="color: #FFD15C">52,775</strong> members<sup style="font-size: 0.4em">1</sup> learn with us through <strong style="color: #FFD15C">72</strong> campus communities in 13 districts<sup style="font-size: 0.4em">2</sup>. <strong style="color: #F6C9D0">11,277</strong> people have built at our two TinkerSpaces<sup style="font-size: 0.4em">3</sup>, and <strong style="color: #F6C9D0">2,413</strong> women’s teams shipped <strong style="color: #F6C9D0">1,393</strong> projects at Tink-Her-Hack 4.0<sup style="font-size: 0.4em">4</sup>.</p>
+<ol style="margin: 48px 0 0; padding: 24px 0 0; border-top: 1px solid rgba(251,244,230,0.3); list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; font-size: 14px; color: #DDE6DF">
+<li><strong style="color: #FBF4E6">1 · Members.</strong> Registered member profiles on TinkerHub’s platform, as of 20 Oct 2026. Registered, not necessarily active.</li>
+<li><strong style="color: #FBF4E6">2 · Campuses.</strong> Communities marked active, 20 Oct 2026. None yet in Wayanad.</li>
+<li><strong style="color: #FBF4E6">3 · TinkerSpaces.</strong> Unique people checked in at Kochi and Calicut, 29 Apr 2024 – 20 Oct 2026. Earlier Kochi visits aren’t counted.</li>
+<li><strong style="color: #FBF4E6">4 · Tink-Her-Hack 4.0.</strong> Teams registered and projects submitted, Feb 2026, across 67 venues.</li>
+</ol>
+</div>
+</section>
+
+
+<!-- GROWTH -->
+<section id="growth" style="background: #FBF4E6">
+<div class="wrap g" style="padding-top: 104px; padding-bottom: 96px; align-items: center">
+<div class="s5">
+<p class="kicker" style="color: #FF7A3D">Growing every year</p>
+<h2 class="h2" style="margin-bottom: 20px">Four times as many events as in 2024.</h2>
+<p style="margin: 0 0 24px; font-size: 18px">Events run through TinkerHub’s platform rose from 364 in 2024 to 1,506 in 2026 — and the year isn’t over. Our flagship hackathon keeps widening its reach too.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<div style="background: #D9CCF2; border: 2px solid #1F3D2B; border-radius: 22px; padding: 18px"><p style="margin: 0; font-size: 13px; font-weight: 700">Tink-Her-Hack venues</p><p class="serif" style="margin: 4px 0 0; font-size: 30px; font-weight: 700; line-height: 1">63 → 67</p><p style="margin: 6px 0 0; font-size: 13px">3.0 (2025) → 4.0 (2026)</p></div>
+<div style="background: #F6C9D0; border: 2px solid #1F3D2B; border-radius: 22px; padding: 18px"><p style="margin: 0; font-size: 13px; font-weight: 700">Projects submitted</p><p class="serif" style="margin: 4px 0 0; font-size: 30px; font-weight: 700; line-height: 1">1,188 → 1,393</p><p style="margin: 6px 0 0; font-size: 13px">+17% year on year</p></div>
+</div>
+<p style="margin: 18px 0 0; font-size: 13px">Events include all sessions logged on the platform. 2024 counts from April, when tracking began. Source: member platform, 20 Oct 2026.</p>
+</div>
+<div class="s7"><svg viewBox="0 0 580 340" role="img" aria-label="Events run on TinkerHub’s platform: 364 in 2024 from April, 1,225 in 2025, 1,506 in 2026 up to 20 October" style="display:block;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg"><path d="M30,270 C200,273 400,268 560,270" stroke="#1F3D2B" stroke-width="3" fill="none" stroke-linecap="round"></path><path d="M55.0,270 C53.0,243.5 58.0,227 57.0,217 C82.5,213 137.5,220 164.0,217 C167.0,238.2 163.0,250 165.0,270 Z" fill="#BFE3C8" stroke="#1F3D2B" stroke-width="3" stroke-linejoin="round"></path><text x="110" y="203" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="30" fill="#1F3D2B">364</text><text x="110" y="300" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#1F3D2B">2024</text><text x="110" y="320" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="13" fill="#1F3D2B">Apr–Dec</text><path d="M235.0,270 C233.0,180.5 238.0,101 237.0,91 C262.5,87 317.5,94 344.0,91 C347.0,162.60000000000002 343.0,250 345.0,270 Z" fill="#B9DDEB" stroke="#1F3D2B" stroke-width="3" stroke-linejoin="round"></path><text x="290" y="77" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="30" fill="#1F3D2B">1,225</text><text x="290" y="300" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#1F3D2B">2025</text><text x="290" y="320" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="13" fill="#1F3D2B">Full year</text><path d="M415.0,270 C413.0,160.0 418.0,60 417.0,50 C442.5,46 497.5,53 524.0,50 C527.0,138.0 523.0,250 525.0,270 Z" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="3" stroke-linejoin="round"></path><text x="470" y="36" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="30" fill="#1F3D2B">1,506</text><text x="470" y="300" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="17" fill="#1F3D2B">2026</text><text x="470" y="320" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="13" fill="#1F3D2B">To 20 Oct</text><path d="M95,180 C200,70 330,40 455,8" fill="none" stroke="#1F3D2B" stroke-width="2.5" stroke-dasharray="3 8" stroke-linecap="round"></path><path d="M440,2 L458,7 L446,21" fill="none" stroke="#1F3D2B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+</div>
+</section>
+<!-- C ECOSYSTEM -->
+<section id="ecosystem" style="background: #F6C9D0">
+<div class="wrap" style="padding-top: 96px; padding-bottom: 96px">
+<div class="g" style="align-items: end; margin-bottom: 40px">
+<div class="s7"><p class="kicker">How it connects</p><h2 class="h2">Five groups. One learning ecosystem.</h2></div>
+<p class="s5" style="margin: 0">Pick a group to see what it brings and where it meets the others.</p>
+</div>
+<div class="g">
+<div class="s5" role="group" aria-label="Choose a group" style="display: flex; flex-direction: column; gap: 10px">
+<button type="button" onClick="{{eco.learners.pick}}" aria-pressed="{{eco.learners.pressed}}" style="{{eco.learners.style}}"><svg viewBox="0 0 80 100" aria-hidden="true" style="width:72px;height:90px;flex-shrink:0;overflow:visible" xmlns="http://www.w3.org/2000/svg"><path d="M20.400000000000002,77.4 C19.0,49.4 28.8,42.4 40,42.4 C51.9,42.4 61.7,50.8 58.9,77.4 Z" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="40" cy="28.4" r="11.899999999999999" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M28.1,25.6 C30.200000000000003,13.0 49.8,13.0 51.9,25.6 C45.6,20.0 35.8,18.6 28.1,25.6 Z" fill="#1F3D2B"></path><circle cx="35.8" cy="29.1" r="1.8" fill="#1F3D2B"></circle><circle cx="44.2" cy="29.1" r="1.8" fill="#1F3D2B"></circle><path d="M36.5,34.7 Q40,37.5 43.5,34.7" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path></svg><span><span style="display: block; font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 600">Learners</span><span style="display: block; font-size: 14px">Students and early-career makers</span></span></button>
+<button type="button" onClick="{{eco.mentors.pick}}" aria-pressed="{{eco.mentors.pressed}}" style="{{eco.mentors.style}}"><svg viewBox="0 0 80 100" aria-hidden="true" style="width:72px;height:90px;flex-shrink:0;overflow:visible" xmlns="http://www.w3.org/2000/svg"><path d="M16.400000000000002,79.4 C15.0,51.4 24.8,44.4 36,44.4 C47.9,44.4 57.7,52.8 54.9,79.4 Z" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="36" cy="30.4" r="11.899999999999999" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M24.1,27.6 C26.200000000000003,15.0 45.8,15.0 47.9,27.6 C41.6,22.0 31.8,20.6 24.1,27.6 Z" fill="#1F3D2B"></path><circle cx="31.8" cy="31.1" r="1.8" fill="#1F3D2B"></circle><circle cx="40.2" cy="31.1" r="1.8" fill="#1F3D2B"></circle><path d="M32.5,36.7 Q36,39.5 39.5,36.7" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><circle cx="58" cy="18" r="8" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></circle></svg><span><span style="display: block; font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 600">Mentors</span><span style="display: block; font-size: 14px">Professionals and alumni who teach</span></span></button>
+<button type="button" onClick="{{eco.campuses.pick}}" aria-pressed="{{eco.campuses.pressed}}" style="{{eco.campuses.style}}"><svg viewBox="0 0 80 100" aria-hidden="true" style="width:72px;height:90px;flex-shrink:0;overflow:visible" xmlns="http://www.w3.org/2000/svg"><path d="M-12,38 L40,4 L92,38 Z" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><rect x="-6" y="38" width="92" height="56" fill="#BFE3C8" stroke="#1F3D2B" stroke-width="2.5"></rect><rect x="4" y="48" width="8" height="46" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><rect x="26" y="48" width="8" height="46" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><rect x="48" y="48" width="8" height="46" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><rect x="70" y="48" width="8" height="46" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><path d="M-16,96 H96" stroke="#1F3D2B" stroke-width="3" stroke-linecap="round"></path></svg><span><span style="display: block; font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 600">Campuses</span><span style="display: block; font-size: 14px">Colleges that host communities</span></span></button>
+<button type="button" onClick="{{eco.spaces.pick}}" aria-pressed="{{eco.spaces.pressed}}" style="{{eco.spaces.style}}"><svg viewBox="0 0 80 100" aria-hidden="true" style="width:72px;height:90px;flex-shrink:0;overflow:visible" xmlns="http://www.w3.org/2000/svg"><rect x="-18" y="46" width="116" height="12" rx="3" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="2.5"></rect><path d="M-8,58 V96 M88,58 V96" stroke="#1F3D2B" stroke-width="3" stroke-linecap="round"></path><rect x="2" y="24" width="34" height="22" rx="3" fill="#B9DDEB" stroke="#1F3D2B" stroke-width="2.5"></rect><path d="M-4,46 H42" stroke="#1F3D2B" stroke-width="2.5"></path><circle cx="68" cy="30" r="11" fill="none" stroke="#1F3D2B" stroke-width="7" stroke-dasharray="4 4"></circle><circle cx="68" cy="30" r="10" fill="#F6C9D0" stroke="#1F3D2B" stroke-width="2.5"></circle><circle cx="68" cy="30" r="4" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></circle></svg><span><span style="display: block; font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 600">TinkerSpaces</span><span style="display: block; font-size: 14px">Open makerspaces in Kochi and Calicut</span></span></button>
+<button type="button" onClick="{{eco.partners.pick}}" aria-pressed="{{eco.partners.pressed}}" style="{{eco.partners.style}}"><svg viewBox="0 0 80 100" aria-hidden="true" style="width:72px;height:90px;flex-shrink:0;overflow:visible" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="40" r="11" fill="none" stroke="#1F3D2B" stroke-width="7" stroke-dasharray="4 4"></circle><circle cx="28" cy="40" r="10" fill="#F6C9D0" stroke="#1F3D2B" stroke-width="2.5"></circle><circle cx="28" cy="40" r="4" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></circle><circle cx="54" cy="30" r="9" fill="none" stroke="#1F3D2B" stroke-width="7" stroke-dasharray="4 4"></circle><circle cx="54" cy="30" r="8" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5"></circle><circle cx="54" cy="30" r="4" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></circle></svg><span><span style="display: block; font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 600">Partners</span><span style="display: block; font-size: 14px">Funders, industry and public bodies</span></span></button>
+</div>
+<div class="s7" aria-live="polite" style="background: #FBF4E6; border: 2px solid #1F3D2B; border-radius: 28px; padding: clamp(24px, 4vw, 44px); box-shadow: 8px 8px 0 #1F3D2B; align-self: start">
+<p class="kicker" style="color: #FF7A3D; margin-bottom: 8px">{{ecoSel.kicker}}</p>
+<h3 class="serif" style="margin: 0 0 14px; font-size: clamp(30px, 3.4vw, 44px); font-weight: 600; line-height: 1.05">{{ecoSel.title}}</h3>
+<p style="margin: 0 0 24px; font-size: 18px">{{ecoSel.text}}</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; border-top: 2px dashed #1F3D2B; padding-top: 20px">
+<div><p style="margin: 0 0 6px; font-weight: 700; font-size: 14px">Brings</p><p style="margin: 0; font-size: 15px">{{ecoSel.brings}}</p></div>
+<div><p style="margin: 0 0 6px; font-weight: 700; font-size: 14px">Meets the others through</p><p style="margin: 0; font-size: 15px">{{ecoSel.through}}</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- D PROGRAMMES -->
+<section id="work">
+<div class="wrap" style="padding-top: 104px; padding-bottom: 96px">
+<div class="g" style="align-items: end; margin-bottom: 28px">
+<div class="s7"><p class="kicker" style="color: #FF7A3D">Our programmes</p><h2 class="h2">Where the learning actually happens.</h2></div>
+<div class="s5" role="group" aria-label="Filter programmes" style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{progTabs}}" as="t" hint-placeholder-count="4">
+<button type="button" onClick="{{t.pick}}" aria-pressed="{{t.pressed}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+</div>
+<div class="g">
+<sc-for list="{{progCards}}" as="c" hint-placeholder-count="6">
+<article class="s4 lift" style="{{c.style}}">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px">
+<span style="{{c.statusStyle}}">{{c.status}}</span>
+<span aria-hidden="true" class="serif" style="font-size: 44px; line-height: 0.8; font-weight: 700">{{c.glyph}}</span>
+</div>
+<h3 class="serif" style="margin: 0; font-size: 28px; font-weight: 600; line-height: 1.05">{{c.name}}</h3>
+<p style="margin: 0; font-size: 16px; flex-grow: 1">{{c.desc}}</p>
+<dl style="margin: 0; font-size: 14px; display: flex; flex-direction: column; gap: 4px; border-top: 2px dashed #1F3D2B; padding-top: 12px">
+<div><dt style="display: inline; font-weight: 700">For: </dt><dd style="display: inline; margin: 0">{{c.who}}</dd></div>
+<div><dt style="display: inline; font-weight: 700">Where: </dt><dd style="display: inline; margin: 0">{{c.where}}</dd></div>
+<div><dt style="display: inline; font-weight: 700">Latest: </dt><dd style="display: inline; margin: 0">{{c.latest}}</dd></div>
+</dl>
+<a href="{{c.url}}" style="font-weight: 700; text-underline-offset: 4px">Explore {{c.name}} →</a>
+</article>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- E STORIES FROM THE FIELD -->
+<section id="stories" style="background: #BFE3C8">
+<div class="wrap" style="padding-top: 96px; padding-bottom: 104px">
+<div class="g" style="align-items: end; margin-bottom: 44px">
+<div class="s7"><p class="kicker">From the field</p><h2 class="h2">Notes from the workbench.</h2></div>
+<p class="s5" style="margin: 0">Dated moments from our records. Photo frames are placeholders until we have consented images.</p>
+</div>
+<div class="g" style="align-items: start">
+<figure class="s4 lift" style="margin: 0; background: #FBF4E6; border: 2px solid #1F3D2B; padding: 14px 14px 18px; transform: rotate(-2deg); box-shadow: 6px 6px 0 #1F3D2B">
+<div role="img" aria-label="Photo placeholder" style="aspect-ratio: 4 / 3; background: #F6C9D0; border: 2px dashed #1F3D2B; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 13px; padding: 12px">[Photo: TinkerSpace Calicut, opening weeks]</div>
+<figcaption style="margin-top: 14px"><span style="font-size: 13px; font-weight: 700; color: #C24E14">15 Aug 2026 · Kozhikode</span><span class="serif" style="display: block; font-size: 22px; font-weight: 600; line-height: 1.15; margin: 4px 0">Calicut opens its doors</span><span style="font-size: 15px">The first check-in at Kerala’s second TinkerSpace. In nine weeks: 824 people, 2,498 visits, 54 projects underway.</span></figcaption>
+</figure>
+<figure class="s4 lift" style="margin: 40px 0 0; background: #FBF4E6; border: 2px solid #1F3D2B; padding: 14px 14px 18px; transform: rotate(1.5deg); box-shadow: 6px 6px 0 #1F3D2B">
+<div role="img" aria-label="Photo placeholder" style="aspect-ratio: 4 / 3; background: #FFD15C; border: 2px dashed #1F3D2B; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 13px; padding: 12px">[Photo: Tink-Her-Hack 4.0 venue]</div>
+<figcaption style="margin-top: 14px"><span style="font-size: 13px; font-weight: 700; color: #C24E14">Feb 2026 · 67 venues</span><span class="serif" style="display: block; font-size: 22px; font-weight: 600; line-height: 1.15; margin: 4px 0">Tink-Her-Hack goes statewide</span><span style="font-size: 15px">The fourth edition ran across 67 venues: 2,413 teams of women, 1,393 projects submitted — up from 63 venues the year before.</span></figcaption>
+</figure>
+<figure class="s4 lift" style="margin: 0; background: #FBF4E6; border: 2px solid #1F3D2B; padding: 14px 14px 18px; transform: rotate(-1deg); box-shadow: 6px 6px 0 #1F3D2B">
+<div role="img" aria-label="Photo placeholder" style="aspect-ratio: 4 / 3; background: #B9DDEB; border: 2px dashed #1F3D2B; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 13px; padding: 12px">[Photo: a learner and her project — with consent]</div>
+<figcaption style="margin-top: 14px"><span style="font-size: 13px; font-weight: 700; color: #C24E14">Story slot</span><span class="serif" style="display: block; font-size: 22px; font-weight: 600; line-height: 1.15; margin: 4px 0">[One learner’s journey]</span><span style="font-size: 15px">[Where she started, what she built, what happened next — in her words, with one verifiable detail.]</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- F WHERE WE WORK -->
+<section id="places">
+<div class="wrap" style="padding-top: 104px; padding-bottom: 96px">
+<div class="g" style="align-items: end; margin-bottom: 32px">
+<div class="s7"><p class="kicker" style="color: #FF7A3D">Where we work</p><h2 class="h2">13 of Kerala’s 14 districts.</h2></div>
+<p class="s5" style="margin: 0">Choose a district to see its active campus communities and TinkerSpaces. Data as of 20 Oct 2026.</p>
+</div>
+<div role="group" aria-label="Choose a district" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px">
+<sc-for list="{{districts}}" as="d" hint-placeholder-count="14">
+<button type="button" onClick="{{d.pick}}" aria-pressed="{{d.pressed}}" style="{{d.style}}">{{d.name}} <span style="{{d.countStyle}}">{{d.count}}</span></button>
+</sc-for>
+</div>
+<div aria-live="polite" style="background: #FFFFFF; border: 2px solid #1F3D2B; border-radius: 28px; padding: clamp(22px, 3.5vw, 40px)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 16px">
+<h3 class="serif" style="margin: 0; font-size: 34px; font-weight: 600">{{distTitle}}</h3>
+<p style="margin: 0; font-weight: 600">{{distSummary}}</p>
+</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0 28px">
+<sc-for list="{{distSites}}" as="s" hint-placeholder-count="8">
+<li style="display: flex; gap: 10px; align-items: baseline; padding: 10px 0; border-top: 1px solid #E7DCC6; font-size: 15px"><span aria-hidden="true" style="{{s.dot}}"></span><span>{{s.name}}<span style="{{s.noteStyle}}">{{s.note}}</span></span></li>
+</sc-for>
+<sc-for list="{{distEmpty}}" as="x" hint-placeholder-count="0">
+<li style="padding: 10px 0; border-top: 1px solid #E7DCC6">{{x.text}}</li>
+</sc-for>
+</ul>
+</div>
+</div>
+</section>
+
+
+<!-- WHICH DISTRICT IS NEXT -->
+<section id="next" style="background: #B9DDEB">
+<div class="wrap" style="padding-top: 104px; padding-bottom: 104px">
+<div class="g" style="align-items: end; margin-bottom: 28px">
+<div class="s7"><p class="kicker">A model ready to replicate</p><h2 class="h2">Which district is next?</h2></div>
+<p class="s5" style="margin: 0">Every circle is a district, north to south, sized by its active campus communities. Stars mark a TinkerSpace. Two districts have one; twelve don’t yet.</p>
+</div>
+<div style="overflow-x: auto; background: #FBF4E6; border: 2px solid #1F3D2B; border-radius: 28px; padding: 20px 16px 4px; margin-bottom: 28px"><svg viewBox="0 0 1000 250" role="img" aria-label="Active campus communities per district, north to south: Kasaragod 2, Kannur 2, Wayanad none yet, Kozhikode 5 with TinkerSpace Calicut, Malappuram 5, Palakkad 3, Thrissur 10, Ernakulam 17 with TinkerSpace Kochi, Idukki 3, Kottayam 6, Alappuzha 6, Pathanamthitta 3, Kollam 4, Thiruvananthapuram 6" style="display:block;width:100%;min-width:760px;height:auto" xmlns="http://www.w3.org/2000/svg"><path d="M20,96 C300,90 700,102 980,96" stroke="#1F3D2B" stroke-width="2" stroke-dasharray="2 7" fill="none" stroke-linecap="round"></path><circle cx="40" cy="96" r="19.9" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="40" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">2</text><text transform="translate(40,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Kasaragod</text><circle cx="110" cy="96" r="19.9" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="110" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">2</text><text transform="translate(110,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Kannur</text><circle cx="180" cy="96" r="14" fill="none" stroke="#1F3D2B" stroke-width="2.5" stroke-dasharray="4 5"></circle><text x="180" y="101" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="15" fill="#1F3D2B">?</text><text transform="translate(180,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Wayanad</text><circle cx="250" cy="96" r="25.7" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="250" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">5</text><path d="M250,20 L253.5,29 L262,31 L255,37 L257,46 L250,41 L243,46 L245,37 L238,31 L246.5,29 Z" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="1.8" stroke-linejoin="round"></path><text transform="translate(250,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Kozhikode</text><circle cx="320" cy="96" r="25.7" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="320" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">5</text><text transform="translate(320,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Malappuram</text><circle cx="390" cy="96" r="22.1" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="390" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">3</text><text transform="translate(390,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Palakkad</text><circle cx="460" cy="96" r="32.1" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="460" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">10</text><text transform="translate(460,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Thrissur</text><circle cx="530" cy="96" r="38.9" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="530" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">17</text><path d="M530,20 L533.5,29 L542,31 L535,37 L537,46 L530,41 L523,46 L525,37 L518,31 L526.5,29 Z" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="1.8" stroke-linejoin="round"></path><text transform="translate(530,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Ernakulam</text><circle cx="600" cy="96" r="22.1" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="600" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">3</text><text transform="translate(600,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Idukki</text><circle cx="670" cy="96" r="27.1" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="670" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">6</text><text transform="translate(670,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Kottayam</text><circle cx="740" cy="96" r="27.1" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="740" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">6</text><text transform="translate(740,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Alappuzha</text><circle cx="810" cy="96" r="22.1" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="810" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">3</text><text transform="translate(810,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Pathanamthitta</text><circle cx="880" cy="96" r="24.0" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="880" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">4</text><text transform="translate(880,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Kollam</text><circle cx="950" cy="96" r="27.1" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><text x="950" y="102" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="17" fill="#1F3D2B">6</text><text transform="translate(950,148) rotate(-38)" text-anchor="end" font-family="Instrument Sans, sans-serif" font-weight="600" font-size="13" fill="#1F3D2B">Thiruvananthapuram</text></svg></div>
+<div class="g">
+<div class="s7" style="background: #FBF4E6; border: 2px solid #1F3D2B; border-radius: 28px; box-shadow: 8px 8px 0 #1F3D2B; padding: clamp(24px, 3.5vw, 40px)">
+<p class="kicker" style="color: #C24E14; margin-bottom: 8px">The Calicut model, costed</p>
+<h3 class="serif" style="margin: 0 0 18px; font-size: clamp(28px, 3vw, 40px); font-weight: 600; line-height: 1.05">₹25.5 lakh runs an open makerspace for a year.</h3>
+<div role="img" aria-label="Year-one budget: 22 lakh rupees pledged by eight companies, 3 lakh from the community" style="display: flex; height: 22px; border: 2px solid #1F3D2B; border-radius: 999px; overflow: hidden; margin-bottom: 10px"><span style="width: 86%; background: #1F3D2B"></span><span style="width: 12%; background: #FF7A3D"></span><span style="flex: 1; background: #FBF4E6"></span></div>
+<p style="margin: 0 0 20px; font-size: 14px"><strong>₹22L</strong> pledged by eight companies · <strong>₹3L</strong> from the community · covers rent, setup, equipment, programmes and running the space.</p>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; border-top: 2px dashed #1F3D2B; padding-top: 18px">
+<div><p class="serif" style="margin: 0; font-size: 30px; font-weight: 700; line-height: 1">824</p><p style="margin: 4px 0 0; font-size: 13px">people in the first nine weeks</p></div>
+<div><p class="serif" style="margin: 0; font-size: 30px; font-weight: 700; line-height: 1">2,498</p><p style="margin: 4px 0 0; font-size: 13px">check-ins</p></div>
+<div><p class="serif" style="margin: 0; font-size: 30px; font-weight: 700; line-height: 1">54</p><p style="margin: 4px 0 0; font-size: 13px">projects underway</p></div>
+</div>
+<p style="margin: 14px 0 0; font-size: 13px">Opened 15 Aug 2026. Figures to 20 Oct 2026, from space check-ins.</p>
+</div>
+<div class="s5" style="display: flex; flex-direction: column; gap: 14px">
+<a href="mailto:mehar@tinkerhub.org?subject=A%20TinkerSpace%20for%20our%20district" class="lift" style="text-decoration: none; background: #FFD15C; border: 2px solid #1F3D2B; border-radius: 28px; padding: 26px; display: flex; flex-direction: column; gap: 8px">
+<span class="kicker" style="margin: 0">For government</span>
+<span class="serif" style="font-size: 26px; font-weight: 600; line-height: 1.1">Bring a TinkerSpace to your district</span>
+<span style="font-size: 15px">Co-locate an open makerspace with your skilling programmes, run by a team that has opened two.</span>
+<span style="font-weight: 700">Talk to us →</span>
+</a>
+<a href="mailto:mehar@tinkerhub.org?subject=Funding%20a%20TinkerSpace" class="lift" style="text-decoration: none; background: #F6C9D0; border: 2px solid #1F3D2B; border-radius: 28px; padding: 26px; display: flex; flex-direction: column; gap: 8px">
+<span class="kicker" style="margin: 0">For CSR &amp; funders</span>
+<span class="serif" style="font-size: 26px; font-weight: 600; line-height: 1.1">Fund a space’s first year</span>
+<span style="font-size: 15px">Back one district, with check-in data you can see. CSR-1 and 80G registered.</span>
+<span style="font-weight: 700">Request a proposal →</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- G PARTNERSHIPS -->
+<section id="partner" style="background: #FFD15C">
+<div class="wrap" style="padding-top: 96px; padding-bottom: 104px">
+<div class="g" style="align-items: end; margin-bottom: 32px">
+<div class="s7"><p class="kicker">Partner with us</p><h2 class="h2">Find your way in.</h2></div>
+<p class="s5" style="margin: 0">What we offer each kind of partner, how it works, and who to talk to.</p>
+</div>
+<div role="tablist" aria-label="Partner type" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px">
+<sc-for list="{{pTabs}}" as="t" hint-placeholder-count="5">
+<button type="button" role="tab" onClick="{{t.pick}}" aria-selected="{{t.pressed}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+<div role="tabpanel" style="background: #FBF4E6; border: 2px solid #1F3D2B; border-radius: 28px; box-shadow: 8px 8px 0 #1F3D2B; padding: clamp(24px, 4vw, 48px)">
+<div class="g">
+<div class="s5">
+<h3 class="serif" style="margin: 0 0 12px; font-size: clamp(28px, 3vw, 40px); font-weight: 600; line-height: 1.05">{{pSel.title}}</h3>
+<p style="margin: 0 0 24px; font-size: 18px">{{pSel.lead}}</p>
+<a href="{{pSel.url}}" class="btn1">{{pSel.cta}} <span aria-hidden="true">→</span></a>
+<p style="margin: 14px 0 0; font-size: 14px">{{pSel.contact}}</p>
+</div>
+<div class="s7">
+<p style="margin: 0 0 10px; font-weight: 700">Ways to work together</p>
+<ul style="margin: 0; padding: 0; list-style: none">
+<sc-for list="{{pSel.ways}}" as="w" hint-placeholder-count="3">
+<li style="display: flex; gap: 12px; padding: 12px 0; border-top: 2px dashed #1F3D2B"><span aria-hidden="true" style="color: #C24E14; font-weight: 700">✶</span><span>{{w.text}}</span></li>
+</sc-for>
+</ul>
+<p style="margin: 14px 0 0; font-size: 14px">{{pSel.proof}}</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- H LIBRARY -->
+<section id="library">
+<div class="wrap" style="padding-top: 104px; padding-bottom: 96px">
+<div class="g" style="align-items: end; margin-bottom: 32px">
+<div class="s7"><p class="kicker" style="color: #FF7A3D">Transparency &amp; resources</p><h2 class="h2">Read the records yourself.</h2></div>
+<p class="s5" style="margin: 0">Reports, financial statements, registrations and policies — each with what it covers.</p>
+</div>
+<div class="g">
+<aside class="s4" style="background: #D9CCF2; border: 2px solid #1F3D2B; border-radius: 28px; padding: 28px; align-self: start">
+<h3 class="serif" style="margin: 0 0 14px; font-size: 26px; font-weight: 600">At a glance</h3>
+<dl style="margin: 0; font-size: 14px">
+<div style="padding: 9px 0; border-top: 1px solid #1F3D2B"><dt style="font-weight: 700">Legal name</dt><dd style="margin: 0">TinkerHub Technology Innovation Foundation</dd></div>
+<div style="padding: 9px 0; border-top: 1px solid #1F3D2B"><dt style="font-weight: 700">Registration</dt><dd style="margin: 0">Society, Reg. No. KKD/CA/478/2016</dd></div>
+<div style="padding: 9px 0; border-top: 1px solid #1F3D2B"><dt style="font-weight: 700">Tax &amp; CSR</dt><dd style="margin: 0">12AA · 80G · CSR-1 CSR00001705</dd></div>
+<div style="padding: 9px 0; border-top: 1px solid #1F3D2B"><dt style="font-weight: 700">Funding</dt><dd style="margin: 0">80–90% donations; ~10% from work for government and partners</dd></div>
+<div style="padding: 9px 0; border-top: 1px solid #1F3D2B"><dt style="font-weight: 700">Financials</dt><dd style="margin: 0">Published from 2018</dd></div>
+</dl>
+</aside>
+<div class="s8">
+<div role="group" aria-label="Filter documents" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px">
+<sc-for list="{{docTabs}}" as="t" hint-placeholder-count="5">
+<button type="button" onClick="{{t.pick}}" aria-pressed="{{t.pressed}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px">
+<sc-for list="{{docs}}" as="d" hint-placeholder-count="8">
+<li><a href="{{d.url}}" class="lift" style="display: flex; flex-direction: column; gap: 6px; height: 100%; box-sizing: border-box; text-decoration: none; background: #FFFFFF; border: 2px solid #1F3D2B; border-radius: 20px; padding: 18px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #C24E14">{{d.type}} · {{d.period}}</span>
+<span class="serif" style="font-size: 20px; font-weight: 600; line-height: 1.15">{{d.title}}</span>
+<span style="font-size: 14px; flex-grow: 1">{{d.desc}}</span>
+<span style="font-size: 14px; font-weight: 700">Open ↗</span>
+</a></li>
+</sc-for>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- I CLOSING -->
+<section style="background: #1F3D2B; color: #FBF4E6; overflow: hidden">
+<div class="wrap" style="padding-top: 96px; padding-bottom: 40px; text-align: center">
+<h2 class="serif" style="margin: 0 auto 18px; font-weight: 600; font-size: clamp(38px, 5.4vw, 72px); line-height: 1; letter-spacing: -0.02em; max-width: 900px">There’s room at the workbench.</h2>
+<p style="margin: 0 auto 32px; font-size: 19px; max-width: 620px; color: #DDE6DF">Teach a session, host a hackathon, fund a space’s first year, or bring your campus in.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 56px">
+<a href="#partner" style="background: #FFD15C; color: #1F3D2B; text-decoration: none; font-weight: 700; padding: 0 26px; height: 52px; border-radius: 999px; display: inline-flex; align-items: center">Partner with us</a>
+<a href="https://fundraiser.tinkerhub.org/" style="color: #FBF4E6; text-decoration: none; font-weight: 700; padding: 0 26px; height: 52px; border-radius: 999px; display: inline-flex; align-items: center; border: 2px solid #FBF4E6">Fund Calicut’s first year</a>
+</div>
+<svg viewBox="0 0 900 230" role="img" aria-label="Illustration: six people of different colours gathered around one long workbench with a laptop, gears and a lightbulb" style="display:block;width:100%;height:auto" xmlns="http://www.w3.org/2000/svg"><path d="M93.4,128.9 C91.5,90.9 104.8,81.4 120,81.4 C136.15,81.4 149.45,92.8 145.65,128.9 Z" fill="#FF7A3D" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="120" cy="62.4" r="16.15" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M103.85,58.6 C106.7,41.5 133.3,41.5 136.15,58.6 C127.6,51.0 114.3,49.1 103.85,58.6 Z" fill="#1F3D2B"></path><circle cx="114.3" cy="63.35" r="1.8" fill="#1F3D2B"></circle><circle cx="125.7" cy="63.35" r="1.8" fill="#1F3D2B"></circle><path d="M115.25,70.95 Q120,74.75 124.75,70.95" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><path d="M225.4,128.9 C223.5,90.9 236.8,81.4 252,81.4 C268.15,81.4 281.45,92.8 277.65,128.9 Z" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="252" cy="62.4" r="16.15" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M235.85,58.6 C238.7,41.5 265.3,41.5 268.15,58.6 C259.6,51.0 246.3,49.1 235.85,58.6 Z" fill="#1F3D2B"></path><circle cx="246.3" cy="63.35" r="1.8" fill="#1F3D2B"></circle><circle cx="257.7" cy="63.35" r="1.8" fill="#1F3D2B"></circle><path d="M247.25,70.95 Q252,74.75 256.75,70.95" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><path d="M357.4,128.9 C355.5,90.9 368.8,81.4 384,81.4 C400.15,81.4 413.45,92.8 409.65,128.9 Z" fill="#BFE3C8" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="384" cy="62.4" r="16.15" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M367.85,58.6 C370.7,41.5 397.3,41.5 400.15,58.6 C391.6,51.0 378.3,49.1 367.85,58.6 Z" fill="#1F3D2B"></path><circle cx="378.3" cy="63.35" r="1.8" fill="#1F3D2B"></circle><circle cx="389.7" cy="63.35" r="1.8" fill="#1F3D2B"></circle><path d="M379.25,70.95 Q384,74.75 388.75,70.95" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><path d="M489.4,128.9 C487.5,90.9 500.8,81.4 516,81.4 C532.15,81.4 545.45,92.8 541.65,128.9 Z" fill="#F6C9D0" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="516" cy="62.4" r="16.15" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M499.85,58.6 C502.7,41.5 529.3,41.5 532.15,58.6 C523.6,51.0 510.3,49.1 499.85,58.6 Z" fill="#1F3D2B"></path><circle cx="510.3" cy="63.35" r="1.8" fill="#1F3D2B"></circle><circle cx="521.7" cy="63.35" r="1.8" fill="#1F3D2B"></circle><path d="M511.25,70.95 Q516,74.75 520.75,70.95" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><path d="M621.4,128.9 C619.5,90.9 632.8,81.4 648,81.4 C664.15,81.4 677.45,92.8 673.65,128.9 Z" fill="#B9DDEB" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="648" cy="62.4" r="16.15" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M631.85,58.6 C634.7,41.5 661.3,41.5 664.15,58.6 C655.6,51.0 642.3,49.1 631.85,58.6 Z" fill="#1F3D2B"></path><circle cx="642.3" cy="63.35" r="1.8" fill="#1F3D2B"></circle><circle cx="653.7" cy="63.35" r="1.8" fill="#1F3D2B"></circle><path d="M643.25,70.95 Q648,74.75 652.75,70.95" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><path d="M753.4,128.9 C751.5,90.9 764.8,81.4 780,81.4 C796.15,81.4 809.45,92.8 805.65,128.9 Z" fill="#D9CCF2" stroke="#1F3D2B" stroke-width="2.5" stroke-linejoin="round"></path><circle cx="780" cy="62.4" r="16.15" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2.5"></circle><path d="M763.85,58.6 C766.7,41.5 793.3,41.5 796.15,58.6 C787.6,51.0 774.3,49.1 763.85,58.6 Z" fill="#1F3D2B"></path><circle cx="774.3" cy="63.35" r="1.8" fill="#1F3D2B"></circle><circle cx="785.7" cy="63.35" r="1.8" fill="#1F3D2B"></circle><path d="M775.25,70.95 Q780,74.75 784.75,70.95" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round"></path><rect x="40" y="128" width="820" height="18" rx="5" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="3"></rect><path d="M80,146 V215 M820,146 V215" stroke="#FBF4E6" stroke-width="4" stroke-linecap="round"></path><rect x="300" y="104" width="48" height="24" rx="3" fill="#B9DDEB" stroke="#1F3D2B" stroke-width="2.5"></rect><circle cx="560" cy="114" r="11" fill="none" stroke="#1F3D2B" stroke-width="7" stroke-dasharray="4 4"></circle><circle cx="560" cy="114" r="10" fill="#F6C9D0" stroke="#1F3D2B" stroke-width="2.5"></circle><circle cx="560" cy="114" r="4" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></circle><g class="bob"><circle cx="450" cy="100" r="11" fill="#FFD15C" stroke="#1F3D2B" stroke-width="2.5"></circle><rect x="445" y="110" width="10" height="6" rx="2" fill="#FBF4E6" stroke="#1F3D2B" stroke-width="2"></rect><path d="M450,82 V76 M436,88 L431,83 M464,88 L469,83" stroke="#1F3D2B" stroke-width="2.5" stroke-linecap="round"></path></g><path d="M60,31 L62.5,37.5 L69,40 L62.5,42.5 L60,49 L57.5,42.5 L51,40 L57.5,37.5 Z" fill="#FFD15C" stroke="#1F3D2B" stroke-width="1.5" stroke-linejoin="round"></path><path d="M850,41 L852.5,47.5 L859,50 L852.5,52.5 L850,59 L847.5,52.5 L841,50 L847.5,47.5 Z" fill="#F6C9D0" stroke="#1F3D2B" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+</div>
+</section>
+
+</main>
+
+<footer style="background: #FBF4E6; border-top: 2px solid #1F3D2B">
+<div class="wrap g" style="padding-top: 48px; padding-bottom: 48px; font-size: 14px">
+<div class="s5"><p class="serif" style="margin: 0 0 8px; font-size: 22px; font-weight: 700">TinkerHub Foundation</p><p style="margin: 0">TinkerHub Technology Innovation Foundation · Reg. No. KKD/CA/478/2016 · Donations eligible under Section 80G. CITTIC, CUSAT, Kochi 682022.</p></div>
+<nav aria-label="Contact" class="s3" style="display: flex; flex-direction: column; gap: 6px"><a href="mailto:hi@tinkerhub.org">hi@tinkerhub.org</a><a href="mailto:mehar@tinkerhub.org">Partnerships</a><a href="mailto:report@tinkerhub.org">Report a concern</a></nav>
+<nav aria-label="More" class="s4" style="display: flex; flex-direction: column; gap: 6px"><a href="https://tinkerhubfoundation.frappe.cloud/privacy-policy">Privacy policy</a><a href="https://tinkerhubfoundation.frappe.cloud/community-guidlines">Community policy</a><a href="https://tinkerhubfoundation.frappe.cloud/careers">Careers</a><a href="https://github.com/tinkerhub">GitHub</a></nav>
+</div>
+</footer>
+
+</div>
+</template>
+<noscript><p style="font-family:sans-serif;padding:24px">This site needs JavaScript for its interactive sections. Contact: hi@tinkerhub.org</p></noscript>
+<script>
+(function () {
+  // Minimal renderer: {{path}} holes, <sc-for list as>, on* handlers.
+  class DCLogic {
+    constructor(props) { this.props = props || {}; this.state = {}; }
+    setState(patch) { Object.assign(this.state, patch); render(); }
+  }
+  window.DCLogic = DCLogic;
+  const HOLE = /^\{\{\s*([\w.]+)\s*\}\}$/;
+  const lookup = (scope, path) => path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), scope);
+  const fillText = (str, scope) => str.replace(/\{\{\s*([\w.]+)\s*\}\}/g, (_, p) => { const v = lookup(scope, p); return v == null ? '' : String(v); });
+  function build(node, scope) {
+    if (node.nodeType === 3) return [document.createTextNode(fillText(node.nodeValue, scope))];
+    if (node.nodeType !== 1) return [];
+    if (node.localName === 'sc-for') {
+      const list = lookup(scope, node.getAttribute('list').match(HOLE)[1]) || [];
+      const as = node.getAttribute('as');
+      const out = [];
+      list.forEach((item) => node.childNodes.forEach((c) => out.push(...build(c, Object.assign({}, scope, { [as]: item })))));
+      return out;
+    }
+    const el = node.cloneNode(false);
+    for (const a of Array.from(node.attributes)) {
+      const m = a.value.match(HOLE);
+      if (/^on/i.test(a.name)) {
+        el.removeAttribute(a.name);
+        const fn = m ? lookup(scope, m[1]) : null;
+        if (typeof fn === 'function') el.addEventListener(a.name.slice(2).toLowerCase(), fn);
+      } else if (m) {
+        const v = lookup(scope, m[1]);
+        if (v == null) el.removeAttribute(a.name); else el.setAttribute(a.name, String(v));
+      } else if (a.value.indexOf('{{') !== -1) {
+        el.setAttribute(a.name, fillText(a.value, scope));
+      }
+    }
+    node.childNodes.forEach((c) => build(c, scope).forEach((n) => el.appendChild(n)));
+    return [el];
+  }
+  let comp, root, tpl;
+  function pathOf(el) { const p = []; while (el && el !== root) { p.unshift(Array.prototype.indexOf.call(el.parentNode.children, el)); el = el.parentNode; } return el === root ? p : null; }
+  function render() {
+    const ae = document.activeElement; const focusPath = ae && root.contains(ae) && ae !== root ? pathOf(ae) : null;
+    const frag = document.createDocumentFragment();
+    tpl.content.childNodes.forEach((c) => build(c, comp.renderVals()).forEach((n) => frag.appendChild(n)));
+    root.replaceChildren(frag);
+    if (focusPath) { let el = root; for (const i of focusPath) { el = el && el.children[i]; } if (el && el.focus) el.focus({ preventScroll: true }); }
+  }
+  window.__mount = function (Component) {
+    root = document.getElementById('app'); tpl = document.getElementById('tpl');
+    comp = new Component({}); render();
+  };
+})();
+</script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { eco: 'spaces', prog: 'all', district: 'Ernakulam', ptab: 'gov', docCat: 'all' };
+  }
+
+  data() {
+    const STAKE = [
+      { id: 'learners', label: 'Learners', text: 'Students and early-career makers who join programmes and run the communities themselves.' },
+      { id: 'mentors', label: 'Mentors', text: 'Industry professionals and community volunteers who teach, review and guide.' },
+      { id: 'colleges', label: 'Colleges', text: 'Engineering and science colleges that host chapters and serve as event venues.' },
+      { id: 'government', label: 'Government', text: 'Public bodies such as Kerala Startup Mission and CUSAT’s CITTIC incubator.' },
+      { id: 'industry', label: 'Industry & CSR', text: 'Companies that co-fund programmes, give infrastructure in kind, host events and hire.' },
+      { id: 'funders', label: 'Funders', text: 'Philanthropic foundations, the FOSS United grant programme and individual patrons.' }
+    ];
+    const PROGS = [
+      { id: 'thh', name: 'Tink-Her-Hack', short: 'Tink-Her-Hack', theme: 'Women in technology', status: 'recurring', period: 'Annual · latest Feb 2026', objective: 'A distributed, women-only hackathon assessed on learning and understanding rather than final pitches.', target: 'Women students in Kerala, any skill level', location: '67 venues (4.0, 2026); 63 (3.0, 2025); 26 (2.0, 2024)', partners: 'Samagata Foundation, Amazon, Kerala Startup Mission (co-funders); 26 host venues', milestones: '2.0: Feb–Mar 2024 · 3.0: Jan 2025 · 4.0: Feb 2026', outputs: '4.0: 2,413 teams, 1,393 projects submitted · 3.0: 2,183 teams, 1,188 projects · 2.0: 1,360 planned seats', outcomes: 'Not yet measured beyond submissions', evidence: 'Event records via Metabase (20 Oct 2026); 2.0 from the event page', link: 'https://tinkerhubfoundation.frappe.cloud/tink-her-hack-2', stake: ['learners', 'colleges', 'government', 'industry', 'funders', 'mentors'], tags: 'women hackathon amazon samagata ksum startup mission ernakulam kollam thrissur palakkad kannur' },
+      { id: 'wmc', name: 'Women Makers Celebration', short: 'Women Makers Celebration', theme: 'Women in technology', status: 'completed', period: 'March 2024', objective: 'Mentoring for top Tink-Her-Hack participants, then a public showcase of women in tech.', target: 'Top 100 Tink-Her-Hack participants; public on day two', location: 'Santhigiri Ashram, Aluva; Kerala Startup Mission, Kochi (Ernakulam)', partners: 'Kerala Startup Mission (venue, day two)', milestones: 'Day 1 tailored sessions and mentoring; day 2 public event', outputs: '[Attendance not published]', outcomes: 'Not published', evidence: 'TinkerHub homepage · dates conflict on the source (22–23 vs 23–24 March)', link: 'https://wmc.tinkerhub.org', stake: ['learners', 'government', 'mentors'], tags: 'women ksum aluva kochi ernakulam' },
+      { id: 'campus', name: 'Campus Communities', short: 'Campus Communities', theme: 'Community learning', status: 'ongoing', period: 'Since 2017', objective: 'Bring peer learning and self-learning into colleges through student-run chapters.', target: 'College students across Kerala', location: '72 active campuses in 13 districts (see atlas)', partners: 'Host colleges', milestones: '2017: first chapter, RIT · 2019: MEC chapter covered by Onmanorama · 2021: 75 communities', outputs: '3,095 events run on the platform since 2024 (all programmes)', outcomes: 'Not published', evidence: 'Active campus list via Metabase · 20 Oct 2026', link: 'https://campus.tinkerhub.org/', stake: ['learners', 'colleges'], tags: 'campus chapter college rit mec kottayam ernakulam' },
+      { id: 'space', name: 'TinkerSpace, Kochi', short: 'TinkerSpace', theme: 'Innovation & making', status: 'ongoing', period: 'Since Dec 2022', objective: 'A free, 24×7 community maker and hacker space for anyone learning technology.', target: 'Students, professionals and tech enthusiasts', location: 'HMT Kalamassery, Kochi (Ernakulam)', partners: 'Individual patrons and donors', milestones: 'Dec 2022 opened · 2024 venue for Mastering AI and Tink-Her-Hack · 2025 Arduino Day; recurring AI Wednesday sessions and hackathon nights', outputs: '10,648 people · 81,989 check-ins · 1,347 projects worked on (since check-ins began, 29 Apr 2024)', outcomes: 'Not published', evidence: 'Space check-ins via Metabase · 20 Oct 2026', link: 'https://tinkerhubfoundation.frappe.cloud/patron', stake: ['learners', 'mentors', 'funders'], tags: 'makerspace kochi kalamassery ernakulam patron' },
+      { id: 'calicut', name: 'TinkerSpace Calicut', short: 'TinkerSpace Calicut', theme: 'Innovation & making', status: 'ongoing', period: 'Open since 15 Aug 2026', objective: 'Kerala’s second open, community-powered makerspace, modelled on TinkerSpace Kochi, with no expensive membership wall.', target: 'Students, developers, designers, artists, entrepreneurs in and around Kozhikode', location: 'Calicut (Kozhikode)', partners: 'Samagata, Mozillor, Cluster Dev, Eduport, Micro Company, Lascade, The Visa Guy, Fantacodee', milestones: 'Space fully built · ₹22L of the ₹25.5L year-one running budget committed by 8 companies · community raising the final ₹3L', outputs: '824 people · 2,498 check-ins · 54 projects in the first nine weeks', outcomes: 'Not yet published', evidence: 'Space check-ins via Metabase · 20 Oct 2026; budget from the campaign page', link: 'https://fundraiser.tinkerhub.org/', stake: ['funders', 'industry', 'learners'], tags: 'calicut kozhikode makerspace fundraiser samagata mozillor clusterdev eduport lascade donate' },
+      { id: 'ai', name: 'Mastering AI: Mastering LLM', short: 'Mastering AI', theme: 'Innovation & making', status: 'completed', period: '24 Feb 2024', objective: 'Hands-on workshop on deploying large language models.', target: 'Working professionals with some AI experience', location: 'TinkerSpace, Kochi', partners: 'E2E Networks (A100 and L40S GPUs, in kind); mentors from Xylem.ai', milestones: 'First workshop in a planned series', outputs: '[Participant count not published]', outcomes: 'Feedback form exists; results not published', evidence: 'Mastering AI page · 2024', link: 'https://tinkerhubfoundation.frappe.cloud/mastering-ai', stake: ['learners', 'mentors', 'industry'], tags: 'ai llm gpu e2e generative professionals kochi' },
+      { id: 'ai-next', name: 'Mastering AI: further workshops', short: 'Mastering AI (next)', theme: 'Innovation & making', status: 'announced', period: 'Announced 2024', objective: 'Image generation; speech recognition in Indian languages; building AI applications.', target: 'Working professionals', location: 'TinkerSpace, Kochi', partners: '[To confirm]', milestones: 'Listed as upcoming', outputs: '—', outcomes: '—', evidence: 'Mastering AI page lists them; delivery not confirmed', link: 'https://tinkerhubfoundation.frappe.cloud/mastering-ai', stake: ['learners', 'mentors'], tags: 'ai speech image malayalam' },
+      { id: 'jams', name: 'Study Jams', short: 'Study Jams', theme: 'Structured learning', status: 'recurring', period: 'Recent: Vue.js, Django', objective: 'Short mentor-led online sprints on one technology, followed by a weekend of building.', target: 'Learners who know basic programming', location: 'Online', partners: 'CE Karunagappally (co-host, Django jam)', milestones: 'Vue.js and Django jams marked “sessions over”', outputs: 'Project showcase page exists [counts not published]', outcomes: 'Not published', evidence: 'Study Jams page · [date of last jam]', link: 'https://tinkerhubfoundation.frappe.cloud/studyjams', stake: ['learners', 'mentors', 'colleges'], tags: 'vue django online karunagappally kollam' },
+      { id: 'mir', name: 'Mentor in Residence', short: 'Mentor in Residence', theme: 'Mentors & educators', status: 'ongoing', period: 'Applications open', objective: 'Bring industry professionals to Kochi for a week, with accommodation provided, to teach at TinkerSpace for at least three days.', target: 'Experienced professionals in technical fields', location: 'Kochi', partners: '—', milestones: 'Application form live on the programme page', outputs: '[Residencies completed not published]', outcomes: 'Not published', evidence: 'Programme page · [date]', link: 'https://tinkerhubfoundation.frappe.cloud/tinkerspace/mentor-in-residence', stake: ['mentors', 'learners'], tags: 'mentor residency kochi' },
+      { id: 'hirehack', name: 'HireHack & Career Development', short: 'HireHack', theme: 'Skills & employability', status: 'ongoing', period: '[Start date]', objective: 'A four-week programme of upskilling, profile building, mock panels and one-on-one mentoring.', target: 'Skilled community members seeking jobs', location: 'Online and campus', partners: 'Hiring partner companies [list to confirm]', milestones: 'Opportunity board maintained on Notion', outputs: '[Cohorts and participants not published]', outcomes: 'Placements not published', evidence: 'Career initiatives page · [date]', link: 'https://tinkerhubfoundation.frappe.cloud/career-initiative', stake: ['learners', 'industry', 'mentors'], tags: 'career jobs hiring resume interview' },
+      { id: 'day', name: 'TinkerDay', short: 'TinkerDay', theme: 'Community learning', status: 'recurring', period: 'Stated: monthly', objective: 'A community gathering to meet, share projects and learn together.', target: 'Anyone who loves technology; women especially encouraged', location: 'Each district monthly; larger centres quarterly (as stated)', partners: '—', milestones: 'Open call for speakers and projects', outputs: '[Editions held not published]', outcomes: 'Not published', evidence: 'TinkerDay page · frequency is a stated plan', link: 'https://tinkerhubfoundation.frappe.cloud/tinker-day', stake: ['learners', 'mentors'], tags: 'meetup community district' },
+      { id: 'hacknight', name: 'Saturday Hack Night', short: 'Saturday Hack Night', theme: 'Innovation & making', status: 'recurring', period: '[Dates]', objective: 'An overnight hackathon to test skills after Study Jams and learning paths.', target: 'Learners ready to build', location: '[Venue]', partners: '—', milestones: '—', outputs: '[Editions not published here]', outcomes: 'Not published', evidence: 'Linked site hacknight.tinkerhub.org (not inspected)', link: 'https://hacknight.tinkerhub.org/', stake: ['learners'], tags: 'hackathon overnight' },
+      { id: 'literacy', name: 'Learning Literacy Program', short: 'Learning Literacy', theme: 'Structured learning', status: 'planned', period: 'Marked “coming soon”', objective: 'Demystify technology jargon for anyone curious to get started.', target: 'Complete beginners', location: '—', partners: '—', milestones: '—', outputs: '—', outcomes: '—', evidence: 'Learn page lists it as coming soon', link: 'https://tinkerhubfoundation.frappe.cloud/learn', stake: ['learners'], tags: 'beginner literacy' }
+    ];
+    const STATUS = {
+      completed: { label: 'Completed', def: 'Delivered; dates confirmed in a published source.', tag: 'background: #111111; color: #F3EFE6; border: 1.5px solid #111111' },
+      ongoing: { label: 'Ongoing', def: 'Running as of the last public record shown on the entry.', tag: 'background: #FFD43B; color: #111111; border: 1.5px solid #111111' },
+      recurring: { label: 'Recurring', def: 'Runs in repeated editions or sessions.', tag: 'background: #FFFFFF; color: #111111; border: 1.5px solid #111111' },
+      announced: { label: 'Announced', def: 'Publicly announced; delivery not confirmed in published sources.', tag: 'background: #FFFFFF; color: #111111; border: 1.5px dashed #111111' },
+      planned: { label: 'Planned', def: 'Described as coming soon; not launched.', tag: 'background-image: repeating-linear-gradient(45deg, #CFC8B8 0 2px, #FFFFFF 2px 6px); color: #111111; border: 1.5px solid #111111' }
+    };
+    const DISTRICTS = ['Kasaragod', 'Kannur', 'Wayanad', 'Kozhikode', 'Malappuram', 'Palakkad', 'Thrissur', 'Ernakulam', 'Idukki', 'Kottayam', 'Alappuzha', 'Pathanamthitta', 'Kollam', 'Thiruvananthapuram'];
+    const V = (name, district, seats, dates) => ({ name, district, layer: 'thh', seats, detail: 'Tink-Her-Hack 2.0 venue · ' + seats + ' planned seats · ' + dates, source: 'Tink-Her-Hack 2.0 venue list, 2024' });
+    const SITES = [
+      V('LBS College of Engineering', 'Kasaragod', 50, '2–3 Mar 2024'),
+      V('Government College of Engineering, Kannur', 'Kannur', 30, '24–25 Feb 2024'),
+      V('Vimal Jyothi Engineering College', 'Kannur', 25, '2–3 Mar 2024'),
+      V('College of Engineering Vadakara', 'Kozhikode', 40, '24–25 Feb 2024'),
+      V('Sullamussalam Science College', 'Malappuram', 40, '24–25 Feb 2024'),
+      V('Zil Money, Manjeri', 'Malappuram', 50, '16–17 Mar 2024'),
+      V('NSS College of Engineering', 'Palakkad', 50, '9–10 Mar 2024'),
+      V('Govt. Engineering College Sreekrishnapuram', 'Palakkad', 30, '2–3 Mar 2024'),
+      V('Ahalia School of Engineering and Technology', 'Palakkad', 25, '9–10 Mar 2024'),
+      V('Jyothi Engineering College', 'Thrissur', 80, '2–3 Mar 2024'),
+      V('Christ College of Engineering, Irinjalakuda', 'Thrissur', 100, '24–25 Feb 2024'),
+      V('Government Engineering College Thrissur', 'Thrissur', 35, '2–3 Mar 2024'),
+      V('Muthoot Institute of Technology & Science', 'Ernakulam', 75, '24–25 Feb 2024'),
+      V('KMEA Engineering College, Aluva', 'Ernakulam', 40, '2–3 Mar 2024'),
+      V('SCMS School of Engineering & Technology', 'Ernakulam', 80, '2–3 Mar 2024'),
+      V('TinkerSpace, Kochi', 'Ernakulam', 100, '9–10 Mar 2024'),
+      V('Mar Athanasius College of Engineering', 'Ernakulam', 100, '2–3 Mar 2024'),
+      V('Rajagiri School of Engineering & Technology', 'Ernakulam', 50, '2–3 Mar 2024'),
+      V('Adi Shankara Institute of Engineering and Technology', 'Ernakulam', 40, '9–10 Mar 2024'),
+      V('College of Engineering Munnar', 'Idukki', 25, '2–3 Mar 2024'),
+      V('Saintgits College of Engineering', 'Kottayam', 25, '9–10 Mar 2024'),
+      V('College of Engineering and Management, Punnapra', 'Alappuzha', 30, '2–3 Mar 2024'),
+      V('TKM College of Engineering', 'Kollam', 100, '9–10 Mar 2024'),
+      V('College of Engineering Karunagappally', 'Kollam', 50, '24–25 Feb 2024'),
+      V('College of Engineering Pathanapuram', 'Kollam', 40, '2–3 Mar 2024'),
+      V('LBS Institute of Technology for Women', 'Thiruvananthapuram', 50, '7–8 Mar 2024'),
+      { name: "Carmel College of Engineering and Technology, Punnapra", district: 'Alappuzha', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Cochin University College of Engineering, Kuttanad", district: 'Alappuzha', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Alappuzha", district: 'Alappuzha', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Chengannur", district: 'Alappuzha', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Providence College of Engineering, Chengannur", district: 'Alappuzha', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Sree Buddha College of Engineering, Pattoor", district: 'Alappuzha', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Adi Shankara Institute of Engineering and Technology, Mattoor", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Albertian Institute of Science and Technology (AISAT), Kalamassery", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Federal Institute of Science & Technology (FISAT), Angamaly", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Ilahia College of Engineering and Technology, Mulavoor", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Jai Bharath College of Management & Engineering Technology, Arackappady", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Jain University", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "KMEA Engineering College, Edathala", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Mar Athanasius College of Engineering, Kothamangalam", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "MES College of Engineering and Technology, Kunnukara", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Model Engineering College, Thrikkakara", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Muthoot Institute of Technology & Science (MITS), Puthencruz", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "School of Engineering CUSAT, Kalamassery", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "SCMS School of Engineering & Technology, Karukutty", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "SNM Institute of Management & Technology, Maliankara", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Sree Narayana Gurukulam College of Engineering, Kadayiruppu", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Toc H Institute of Science & Technology, Arakkunnam", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Viswajyothi College of Engineering and Technology, Vazhakulam", district: 'Ernakulam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Al Azhar College of Engineering & Technology, Perumpillichira", district: 'Idukki', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Munnar", district: 'Idukki', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Mar Baselios Christian College of Engineering and Technology, Peerumedu", district: 'Idukki', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Sree Narayana Guru College of Engineering & Technology, Chalakode", district: 'Kannur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Vimal Jyothi Engineering College, Chemperi", district: 'Kannur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Trikaripur", district: 'Kasaragod', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "LBS College of Engineering, Povval", district: 'Kasaragod', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Baselios Mathews II College of Engineering, Sasthamcotta", district: 'Kollam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Karunagappally", district: 'Kollam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Perumon", district: 'Kollam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "TKM College of Engineering, Karicode", district: 'Kollam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Poonjar", district: 'Kottayam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Indian Institute of Information Technology (IIIT), Kottayam", district: 'Kottayam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Rajiv Gandhi Institute of Technology, Velloor", district: 'Kottayam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Saintgits College of Applied Sciences, Pathamuttam", district: 'Kottayam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Saintgits College of Engineering, Pathamuttom", district: 'Kottayam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "St. Josephs College of Engineering and Technology, Choondacherry", district: 'Kottayam', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Vadakara", district: 'Kozhikode', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Farook College, Farook", district: 'Kozhikode', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Government Engineering College, West Hill", district: 'Kozhikode', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Muhammed Abdurahiman Memorial Orphanage College, Mukkam", district: 'Kozhikode', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "St. Joseph's College Devagiri", district: 'Kozhikode', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Duxford College for Advanced Studies", district: 'Malappuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "EMEA College of Arts & Science, Kondotty", district: 'Malappuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Institute of Engineering and Technology, Thenhipalam", district: 'Malappuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Majlis Arts & Science College, Valanchery", district: 'Malappuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Unity Women's College, Manjeri", district: 'Malappuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Ahalia School of Engineering & Technology, Palakkad", district: 'Palakkad', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Jawaharlal College of Engineering and Technology, Lakkidi", district: 'Palakkad', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "NSS College of Engineering, Akathethara", district: 'Palakkad', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Adoor", district: 'Pathanamthitta', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Kallooppara", district: 'Pathanamthitta', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "St. Thomas College, Ranni", district: 'Pathanamthitta', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "ACE College of Engineering, Karinkadamugal", district: 'Thiruvananthapuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Attingal", district: 'Thiruvananthapuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "College of Engineering, Thiruvananthapuram", district: 'Thiruvananthapuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "LBS Institute of Technology for Women, Poojappura", district: 'Thiruvananthapuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Lourdes Matha College of Science & Technology, Kuttichal", district: 'Thiruvananthapuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Sree Chitra Thirunal College of Engineering, Pappanamcode", district: 'Thiruvananthapuram', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Ansar Women's College, Perumpilavu", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Christ College of Engineering, Irinjalakuda", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Government Engineering College, Thrissur", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "ICCS College of Engineering and Management", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Jyothi Engineering College, Cheruthuruthy", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Paramekkavu College of Arts & Science, Punkunnam", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Sahrdaya College of Advanced Studies, Kodakara", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Sahrdaya College of Engineering & Technology, Kodakara", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Thejus Engineering College, Erumapetty", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: "Vidya Academy of Science & Technology, Thalakkottukara", district: 'Thrissur', layer: 'campus', detail: 'Active campus community', source: 'TinkerHub member platform via Metabase · 20 Oct 2026' },
+      { name: 'TinkerSpace Kochi, Kalamassery', district: 'Ernakulam', layer: 'base', detail: 'Open since Dec 2022 · 10,648 people checked in since Apr 2024', source: 'Space check-ins via Metabase · 20 Oct 2026' },
+      { name: 'CITTIC, CUSAT', district: 'Ernakulam', layer: 'base', detail: 'Incubation and registered office; community formed here in 2015', source: 'About and Contact pages' },
+      { name: 'TinkerSpace Calicut', district: 'Kozhikode', layer: 'base', detail: 'Open since 15 Aug 2026 · 824 people, 2,498 check-ins so far', source: 'Space check-ins via Metabase · 20 Oct 2026' },
+      { name: 'Santhigiri Ashram, Aluva', district: 'Ernakulam', layer: 'base', detail: 'Women Makers Celebration, day one (Mar 2024)', source: 'TinkerHub homepage' },
+      { name: 'Kerala Startup Mission, Kochi', district: 'Ernakulam', layer: 'base', detail: 'Women Makers Celebration, day two (Mar 2024)', source: 'TinkerHub homepage' }
+    ];
+    const DIARY = [
+      { date: 'Now', type: 'Milestone', text: 'Campaign to fund TinkerSpace Calicut’s first year of running: ₹22L of ₹25.5L committed by eight companies; the community is asked for the final ₹3L.' },
+      { date: '2026', type: 'Milestone', text: 'TinkerSpace Calicut fully built — Kerala’s second TinkerSpace, in Kozhikode.' },
+      { date: '2025', type: 'Output', text: 'Arduino Day 2025 held at TinkerSpace Kochi (photo on the Calicut campaign page).' },
+      { date: 'Mar 2024', type: 'Output', text: 'Women Makers Celebration: mentoring for the top 100 Tink-Her-Hack participants, then a public day at Kerala Startup Mission.' },
+      { date: '24 Feb 2024', type: 'Output', text: 'Mastering AI opens with a hands-on LLM deployment workshop at TinkerSpace, on GPUs from E2E Networks.' },
+      { date: '24 Feb 2024', type: 'Milestone', text: 'Tink-Her-Hack 2.0 begins across 26 venues — 1,360 planned seats.' },
+      { date: 'Dec 2022', type: 'Milestone', text: 'TinkerSpace opens in Kochi: free and open 24×7.' },
+      { date: '2021', type: 'Milestone', text: 'Campus communities reach 75.' },
+      { date: '2020', type: 'Milestone', text: 'Funding from Zerodha via FOSS United.' },
+      { date: 'Apr 2019', type: 'Observation', text: 'Onmanorama reports on students at Government Model Engineering College starting a chapter.' },
+      { date: '2019', type: 'Milestone', text: '80G tax exemption received.' },
+      { date: '2018', type: 'Milestone', text: 'First full-time staff member joins.' },
+      { date: '2017', type: 'Milestone', text: 'First campus community, at RIT.' },
+      { date: '2016', type: 'Milestone', text: 'Registered as a society (KKD/CA/478/2016).' },
+      { date: '2015', type: 'Milestone', text: 'TinkerHub forms as a community at CITTIC, CUSAT.' },
+      { date: '2014', type: 'Milestone', text: 'Maker Party Kochi, the event TinkerHub grew out of.' }
+    ];
+    const DOCS = [
+      { cat: 'reports', title: 'Impact Report 2022–23', desc: 'Programmes, reach and growth for the year.', type: 'PDF', period: 'FY 2022–23', url: 'https://drive.google.com/file/d/1RuHc3FCQI0Pbw0u9jid5816G4wHvxH98/view' },
+      { cat: 'reports', title: 'Impact Report 2021–22', desc: 'Annual activities and growth.', type: 'PDF', period: 'FY 2021–22', url: 'https://drive.google.com/file/d/14MLoI7xFD8wVlr5tQUABbPxGZOzEES-Y/view' },
+      { cat: 'reports', title: 'Impact Report 2020–21', desc: 'Annual activities and growth.', type: 'PDF', period: 'FY 2020–21', url: 'https://drive.google.com/file/d/1uPhaQQqon3_9X-jkbT-iu7fs2n75VaUR/view' },
+      { cat: 'financials', title: 'Financial statements', desc: 'Annual financial reports, 2018 onward.', type: 'Folder', period: '2018 →', url: 'https://drive.google.com/drive/folders/1KcwInG75vyoXm9QcEOZUYmInEwwzlZf3' },
+      { cat: 'governance', title: 'Registrations & legal structure', desc: 'Society registration, 12AA, 80G, CSR-1 and how TinkerHub is funded.', type: 'Web page', period: 'Current', url: 'https://tinkerhubfoundation.frappe.cloud/non-profit' },
+      { cat: 'governance', title: 'Board, team and history', desc: 'Board of members, staff and timeline.', type: 'Web page', period: 'Current', url: 'https://tinkerhubfoundation.frappe.cloud/about' },
+      { cat: 'policies', title: 'Community Policy 1.0', desc: 'Code of conduct, reporting process and POSH guidelines.', type: 'Web page', period: 'v1.0', url: 'https://tinkerhubfoundation.frappe.cloud/community-guidlines' },
+      { cat: 'policies', title: 'Privacy policy', desc: 'What data is collected and how it is used.', type: 'Web page', period: 'Current', url: 'https://tinkerhubfoundation.frappe.cloud/privacy-policy' },
+      { cat: 'policies', title: 'Donation refund policy', desc: 'How refund requests are handled.', type: 'Web page', period: 'Current', url: 'https://tinkerhubfoundation.frappe.cloud/donation-refund-policy' },
+      { cat: 'financials', title: 'Build TinkerSpace Calicut', desc: 'Year-one budget, company backers and community funding goals.', type: 'Campaign page', period: 'Year one', url: 'https://fundraiser.tinkerhub.org/' },
+      { cat: 'governance', title: 'Introduction presentation', desc: 'Overview deck for partners.', type: 'PDF', period: '[Date]', url: 'https://drive.google.com/file/d/1QgvecFirdqiZn7ptPUKERYUFLpCdhPe8/view' }
+    ];
+    return { STAKE, PROGS, STATUS, DISTRICTS, SITES, DIARY, DOCS };
+  }
+
+
+
+  chip(on) {
+    return 'min-height: 42px; padding: 0 16px; border-radius: 999px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; border: 2px solid #1F3D2B; display: inline-flex; align-items: center; gap: 8px; ' + (on ? 'background: #1F3D2B; color: #FBF4E6' : 'background: transparent; color: #1F3D2B');
+  }
+
+  renderVals() {
+    const { SITES, DISTRICTS, DOCS } = this.data();
+    const st = this.state;
+
+    // C. Ecosystem
+    const ECO = {
+      learners: { kicker: 'Learners', title: 'They learn by building, together.', text: 'Students and early-career makers join free, learn from peers, and ship real projects at hackathons, study jams and the TinkerSpaces.', brings: 'Curiosity, time and projects — 52,775 registered members so far.', through: 'Campus communities, Tink-Her-Hack, Study Jams, the TinkerSpaces.' },
+      mentors: { kicker: 'Mentors', title: 'They pass on what they know.', text: 'Industry professionals and alumni run sessions, review projects and guide learners — including week-long residencies in Kochi.', brings: 'Experience, feedback and links to industry.', through: 'Mentor in Residence, Study Jams, workshops at the TinkerSpaces.' },
+      campuses: { kicker: 'Campuses', title: 'They put learning where students are.', text: 'Colleges host student-run TinkerHub communities and serve as venues for statewide programmes.', brings: 'Students, rooms and continuity — 72 active communities in 13 districts.', through: 'Campus communities and Tink-Her-Hack venues (67 in 2026).' },
+      spaces: { kicker: 'TinkerSpaces', title: 'They give everyone a place to build.', text: 'Free, open community makerspaces in Kochi (since Dec 2022) and Calicut (since Aug 2026). No membership wall.', brings: 'Tools, space and a community, 24×7 in Kochi — 11,277 people since Apr 2024.', through: 'Workshops, hackathon nights, residencies and everyday tinkering.' },
+      partners: { kicker: 'Partners', title: 'They make it possible.', text: 'Foundations, companies and public bodies fund programmes and spaces, contribute equipment, and hire from the community.', brings: 'Funding, infrastructure and opportunities — eight companies pledged ₹22L for Calicut’s first year.', through: 'Programme funding, in-kind support, hiring and co-hosting.' }
+    };
+    const ecoBase = 'width: 100%; display: flex; align-items: center; gap: 16px; text-align: left; font: inherit; color: #1F3D2B; cursor: pointer; border: 2px solid #1F3D2B; border-radius: 22px; padding: 8px 18px 8px 12px; min-height: 96px; transition: transform .15s; ';
+    const eco = {};
+    Object.keys(ECO).forEach((k) => {
+      const on = st.eco === k;
+      eco[k] = { pressed: on ? 'true' : 'false', style: ecoBase + (on ? 'background: #FBF4E6; box-shadow: 6px 6px 0 #1F3D2B; transform: translateX(6px)' : 'background: transparent'), pick: () => this.setState({ eco: k }) };
+    });
+
+    // D. Programmes
+    const PROGS = [
+      { id: 'kochi', group: 'now', name: 'TinkerSpace Kochi', glyph: '⌂', bg: '#F6C9D0', status: 'Open now', desc: 'A free, 24×7 community makerspace for anyone learning to build — hardware, software or a first product.', who: 'Students, developers, designers, anyone curious', where: 'HMT Kalamassery, Ernakulam', latest: '10,648 people since Apr 2024', url: 'https://tinkerhubfoundation.frappe.cloud/patron' },
+      { id: 'calicut', group: 'now', name: 'TinkerSpace Calicut', glyph: '✶', bg: '#FFD15C', status: 'Open now', desc: 'Kerala’s second open makerspace, modelled on Kochi. Its first year is funded by eight companies and the community.', who: 'Makers in and around Kozhikode', where: 'Kozhikode', latest: 'Opened 15 Aug 2026 · 824 people so far', url: 'https://fundraiser.tinkerhub.org/' },
+      { id: 'campus', group: 'now', name: 'Campus Communities', glyph: '◎', bg: '#BFE3C8', status: 'Active', desc: 'Student-run communities that bring peer learning, events and projects into colleges.', who: 'College students', where: '72 campuses, 13 districts', latest: 'Active list as of 20 Oct 2026', url: 'https://campus.tinkerhub.org/' },
+      { id: 'thh', group: 'recurring', name: 'Tink-Her-Hack', glyph: '♀', bg: '#D9CCF2', status: 'Annual', desc: 'A women-only hackathon held across many venues at once, judged on learning rather than pitches.', who: 'Women students, any skill level', where: 'Statewide', latest: '4.0, Feb 2026: 67 venues, 2,413 teams', url: 'https://tinkerhubfoundation.frappe.cloud/tink-her-hack-2' },
+      { id: 'jams', group: 'recurring', name: 'Study Jams', glyph: '{ }', bg: '#B9DDEB', status: 'Recurring', desc: 'Short, mentor-led sprints on one technology, followed by a weekend of building.', who: 'Learners who know basic programming', where: 'Online and on campus', latest: 'Ran as Tink-Her-Hack prep, Jan–Feb 2025', url: 'https://tinkerhubfoundation.frappe.cloud/studyjams' },
+      { id: 'mir', group: 'open', name: 'Mentor in Residence', glyph: '☕', bg: '#FBF4E6', status: 'Open call', desc: 'Spend a week in Kochi, stay provided, and teach at TinkerSpace for at least three days.', who: 'Experienced professionals', where: 'Kochi', latest: 'Applications open on our website', url: 'https://tinkerhubfoundation.frappe.cloud/tinkerspace/mentor-in-residence' }
+    ];
+    const PT = [{ id: 'all', label: 'All' }, { id: 'now', label: 'Running now' }, { id: 'recurring', label: 'Recurring' }, { id: 'open', label: 'Open calls' }];
+    const progTabs = PT.map((t) => ({ label: t.label, pressed: st.prog === t.id ? 'true' : 'false', style: this.chip(st.prog === t.id), pick: () => this.setState({ prog: t.id }) }));
+    const progCards = PROGS.filter((p) => st.prog === 'all' || p.group === st.prog).map((p) => ({
+      ...p,
+      style: 'display: flex; flex-direction: column; gap: 14px; background: ' + p.bg + '; border: 2px solid #1F3D2B; border-radius: 28px; padding: 26px; box-sizing: border-box; min-height: 400px',
+      statusStyle: 'font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 2px solid #1F3D2B; border-radius: 999px; padding: 3px 10px; background: #FBF4E6'
+    }));
+
+    // F. Places
+    const pool = SITES.filter((s) => s.layer === 'campus' || s.layer === 'base');
+    const used = DISTRICTS.filter((d) => pool.some((s) => s.district === d));
+    const districts = DISTRICTS.map((d) => {
+      const n = pool.filter((s) => s.district === d && s.layer === 'campus').length;
+      const on = st.district === d;
+      return { name: d, count: String(n), pressed: on ? 'true' : 'false', style: this.chip(on), countStyle: 'font-size: 12px; border-radius: 999px; padding: 1px 8px; ' + (on ? 'background: #FFD15C; color: #1F3D2B' : 'background: #F6C9D0'), pick: () => this.setState({ district: d }) };
+    });
+    const here = pool.filter((s) => s.district === st.district && (s.layer === 'campus' || s.name.indexOf('TinkerSpace') === 0));
+    here.sort((a, b) => (a.layer === b.layer ? a.name.localeCompare(b.name) : a.layer === 'base' ? -1 : 1));
+    const distSites = here.map((s) => ({
+      name: s.name,
+      dot: 'display: inline-block; width: 10px; height: 10px; flex-shrink: 0; ' + (s.layer === 'base' ? 'background: #FF7A3D; transform: rotate(45deg)' : 'background: #1F3D2B; border-radius: 50%'),
+      note: s.layer === 'base' ? ' — ' + s.detail : '',
+      noteStyle: 'color: #4E6357'
+    }));
+    const nCamp = here.filter((s) => s.layer === 'campus').length;
+    const nSpace = here.length - nCamp;
+    const distSummary = nCamp + (nCamp === 1 ? ' campus community' : ' campus communities') + (nSpace ? ' · ' + nSpace + (nSpace === 1 ? ' TinkerSpace' : ' TinkerSpaces') : '');
+    const distEmpty = here.length ? [] : [{ text: 'No active campus community here yet — a college in this district could be the first.' }];
+
+    // G. Partners
+    const P = {
+      gov: { label: 'Government', title: 'For government and public bodies', lead: 'A statewide network that can deliver skilling where students already are.', ways: ['Run skilling programmes through 72 campus communities across 13 districts.', 'Co-host multi-venue programmes — we ran Tink-Her-Hack 4.0 at 67 venues.', 'Set up an open community makerspace in your district, as we did in Kochi and Calicut.'], proof: 'We list a public body as a partner only with its approval.', cta: 'Start a conversation', url: 'mailto:mehar@tinkerhub.org?subject=Government%20collaboration', contact: 'Moosa Mehar MP, Co-founder & CEO · mehar@tinkerhub.org' },
+      colleges: { label: 'Colleges', title: 'For colleges and universities', lead: 'Give your students a peer-learning community and a stage beyond the classroom.', ways: ['Start a student-run TinkerHub campus community.', 'Host a venue for the next Tink-Her-Hack.', 'Bring student teams to build at TinkerSpace Kochi or Calicut.'], proof: '72 colleges currently host an active community.', cta: 'Apply to host', url: 'https://forms.gle/LLfX9xFyKCRHejit6', contact: 'Kurian Jacob, COO · kurian@tinkerhub.org' },
+      csr: { label: 'CSR & industry', title: 'For CSR teams and companies', lead: 'Fund visible, accountable programmes — and meet the talent they produce.', ways: ['Fund a programme, a district or a TinkerSpace’s year of running.', 'Contribute equipment or infrastructure in kind, as E2E Networks did with GPUs.', 'Hire from the community through HireHack.'], proof: 'CSR-1 registered (CSR00001705) · 80G certified · eight companies pledged ₹22L for Calicut’s first year.', cta: 'Request a proposal', url: 'mailto:mehar@tinkerhub.org?subject=CSR%20partnership', contact: 'mehar@tinkerhub.org' },
+      mentors: { label: 'Mentors', title: 'For mentors and volunteers', lead: 'Share what you know with people eager to learn it.', ways: ['Spend a week as Mentor in Residence in Kochi, stay provided.', 'Run a session or workshop at a TinkerSpace.', 'Review projects at a hackathon near you.'], proof: 'Residencies run at TinkerSpace Kochi.', cta: 'Apply as a mentor', url: 'https://docs.google.com/forms/d/e/1FAIpQLSfkNekrC4TaJBo2xYkKQ1MU2msR1HeacILJ9FTaGRHWKQ6G_g/viewform', contact: 'hi@tinkerhub.org' },
+      learners: { label: 'Learners', title: 'For learners', lead: 'Everything is free. Show up, learn with others, build something real.', ways: ['Join the community on TinkerHub’s platform.', 'Walk into TinkerSpace Kochi or Calicut.', 'Find the TinkerHub community on your campus.'], proof: '52,775 people have registered so far.', cta: 'Join TinkerHub', url: 'https://app.tinkerhub.org/', contact: 'hi@tinkerhub.org' }
+    };
+    const pTabs = Object.keys(P).map((k) => ({ label: P[k].label, pressed: st.ptab === k ? 'true' : 'false', style: this.chip(st.ptab === k), pick: () => this.setState({ ptab: k }) }));
+    const sel = P[st.ptab];
+    const pSel = { ...sel, ways: sel.ways.map((t) => ({ text: t })) };
+
+    // H. Library
+    const DC = [{ id: 'all', label: 'All' }, { id: 'reports', label: 'Impact reports' }, { id: 'financials', label: 'Money' }, { id: 'governance', label: 'Governance' }, { id: 'policies', label: 'Policies' }];
+    const docTabs = DC.map((t) => ({ label: t.label, pressed: st.docCat === t.id ? 'true' : 'false', style: this.chip(st.docCat === t.id), pick: () => this.setState({ docCat: t.id }) }));
+    const docs = DOCS.filter((d) => st.docCat === 'all' || d.cat === st.docCat);
+
+    return {
+      eco, ecoSel: ECO[st.eco],
+      progTabs, progCards,
+      districts, distTitle: st.district, distSummary, distSites, distEmpty,
+      pTabs, pSel, docTabs, docs
+    };
+  }
+}
+
+window.__mount(Component);
+</script>
+</body>
+</html>
